@@ -1,0 +1,129 @@
+
+	-- Area Chart=>
+			-Area chart is same as line except the shading
+			below line.
+			-Types
+			a)Discrete
+			b)Continuous
+	--Dual Charts=>
+			-These charts are used to compare
+			target value vs actual value.
+			a) Dual line	- date field compulsory
+			b) Dual combo	- date field compulsory
+			c) Bullet graph	- date field not compulsory
+======================================================================
+
+	--Geographic chart=>
+		1) Symbol map
+		2) Solid map (Choropleth)
+		
+		created using one geographic field and one measure.
+		Examples of Geo fields - Country, State, City, Airport
+		pincode etc.
+	
+	-- Scatter Plot=>
+		1) with aggregation
+		2) without aggregation
+	
+	--Box Plot=>
+			-for ouliers
+	--Histogram=>
+	
+===================================================================
+$$$$ Filter=>
+	1)Data Source
+	2)Quick
+	3)Dimension
+	4)Measure
+	5)Date
+	6)Top/Bottom
+	7)Context
+	
+	--6 styles of Dimention Filter=>
+	1)Multi value select
+	2)Single value select
+	3)Multi value dropdown
+	4)Single value dropdown
+	5)Single value slider
+	6)Custom-> Wildcard match (similar to LIKE clause in SQL)
+	
+	--Steps to create Top/Bottom filter:
+		1)Drag dimension on rows. Then add measure to
+		  columns to create horizontal bar chart.
+		2)Now drag the same dimension filter & select
+		  "Top" option on filter box.
+		3)Select "By field" option & enter no. of
+		  top/bottom records here. Defaultn is 10.
+		4)Set the chart in Entire view.
+	
+	--Context Filter=>
+			This filter is necessary when two filters are
+			applied on a chart at the same time and one
+			of the filters is Top/Bottom.
+=====================================================================
+$$$$ Table Calculations=>
+		1)Running Total
+		2)Difference
+		3)% difference
+		4)Rank
+		5)Moving Average -[(currrent + '2' Previous)/3]
+				-> Line Smoothening logic
+		6)YoY Growth
+				-Comapare this year figure with previous year.
+=====================================================================
+$$$$ Analytics in Tableau=>
+		1)Constant line
+		2)Average line
+		3)Clustering
+=====================================================================
+	
+$$$$ Create custom calculations (KPI)
+		-Types of calculated fields->
+			1)applied on the column.
+			2)applied on each row.
+	1)Total Sales
+	2)Total Profit
+	3)Total Shipping Cost
+	4)Total Quantity
+	5)Avg Sales
+	6)Avg Profit
+	7)Avg Shipping Cost
+	8)Avg Quantity
+	9)Avg Discount
+====================================================================
+
+--Reference line with parameter
+		This technique converts a constant line into
+		dynamic line whose values can be set using business
+		condition.
+		
+	-How to create calculated fields using 
+	 COUNT/COUNTD?
+	 10)No. of orders
+	 11)NO. of products
+	 12)No. of customers
+	 13)NO. of returned orders
+	 
+--Parameter within calculated field=>
+	
+	Select measure to Display --> Parameter
+			["Sales",
+			"Profit",
+			"Quantity",
+			"Shipping Cost"]
+			
+	Select mesure --> Calculated field
+=====================================================================
+--Create Custom groups using a dimension
+  
+  Create a group of sub-categories as below
+  1)subCat Group 1 - Accessories, labels, storage & phones.
+  2)subCat Group 2 - Tables, Appliances, Paper & Art.
+  3)subCat Group 3 - Furnishing, copiers, Binder & Machine.
+  4)subCat Group 4 - Chair, Bookcases, Envelope, Fastner &
+					 Supplies.
+ 
+	
+			
+	
+		

@@ -1,0 +1,11 @@
+EDA : (Exploratory Data Analysis)
+- involves counting total rows and columns
+		Transaction Table => 14 columns and 4249 rows
+		
+-Absolute Reference
+	i.e. Fix the formula for specific value position by 
+		 adding '$' symbol before & after column character
+
+-Conditional Formatting->
+	To set font color or background color based on 
+	specific business conditions is called Conditional Formatting. 

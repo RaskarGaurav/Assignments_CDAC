@@ -1,0 +1,212 @@
+-Refer file "Excel Exercise CDAC.xlsx"->'Sheet1'
+#############################################################################################
+$$$$ SUM functions=>
+		1) SUMIF->(Single Condition) similar to SQL WHERE clause
+			=SUMIF([CriteriaRange],Criteria/Condition,[SumRange])
+		2) SUMIFS-> (Multiple Conditions) 
+			=SUMIFS([SumRange],[CriteriaRange-1],Criteria-1,[CriteriaRange-2],Criteria-2,...)
+
+Q.1)Calculate total actual sales for those records where area code is 970.
+	=>	=SUMIF(B2:B21,"970",C2:C21)
+		=SUMIF([CriteriaRange],Criteria/Condition,[SumRange])
+
+Q.2) Calaculate total profit where area code is 719.
+	=>	=SUMIF(B2:B21,"719",D2:D21)
+	
+Q.3) Calculate total Marketing Where are code is 303.
+	=>	=SUMIF(B2:B21,"303",G2:G21)
+	
+Q.4)Calculate total cost where product id is 5.
+	=>	=SUMIF(A2:A21,"5",E2:E21)
+	
+Q.5)Calculate total inventory where product id is 8.
+	=>	=SUMIF(A2:A21,"8",H2:H21)
+	
+Q.6)Calculaate Total profit where ProductID=2 and Area Code=217.
+	=>	=SUMIFS(D2:D21,A2:A21,"2",B2:B21,"217")
+		=SUMIFS([SumRange],[CriteriaRange-1],Criteria-1,[CriteriaRange-2],Criteria-2,...)
+
+Q.7)Calculate total marketing where ProductID=6 and AreaCode=630.
+	=>	=SUMIFS(G2:G21,A2:A21,"6",B2:B21,"630")
+	
+#########################################################################################
+$$$$ AVERAGE function=>
+		1) AVERAGE ->
+			=AVERAGE([avgRange])
+		2) AVERAGEIF ->
+			=AVERAGEIF([CriteriaRange],Criteria/Condition,[AvgRange])
+
+Q.1)Calculate average of sales.
+	=> =AVERAGE(C2:C21)
+
+Q.2)Calculate average of marketing.
+	=> =AVERAGE(G2:G2)
+	
+Q.3)Calculate average profit where AreaCode=719.
+	=>	=AVERAGEIF(B2:B21,"719",D2:D21)
+	
+Q.4)Calculate average cost where ProductID=11.
+	=>	=AVERAGEIF(A2:A21,"11",E2:E21)
+
+########################################################################################
+$$$$ COUNT function=>
+		-regular-> with duplicates
+		-distinct-> without duplicates
+		
+		1)COUNT-> =COUNT([countRange])
+		2)COUNTIF-> =COUNTIF([countRange],Criteria)
+
+Q.1)Count no. of records in Inventory column.
+	=>	=COUNT(H2:H21)
+
+Q.2)Count no. records in cost where cost is more than 75.
+	=>	=COUNTIF(E2:E21,">75")	(or)
+********=COUNTIF(E2:E21,"> "&K16)---#Dynamic selection with cell select...
+
+Q.3.)Count no. records in Inventory where Inventory is less than 850.
+	=> =COUNTIF(H2:H21,"< "&K18)
+
+Q.4)Count no. of records of marketing where calue is above 40.Make dynamic selection.
+	=> 	=COUNTIF(G2:G21,"> "&K20)---#Dyanmic selection with DropDown menu...Refer "01Steps"
+********01Steps:
+			{Go to Menu->Data->Data Validation->
+			Allow:(select list)->Source:(select values(mouse))->ok}
+
+###########################################################################################
+-Refer file "Excel Exercise CDAC.xlsx"->'IF function'
+$$$$ if-else=>
+		1) if-> =IF(test,[value if TRUE],[value if FALSE])
+	-Absolute Reference
+	i.e. Fix the formula for specific value position by 
+		 adding '$' symbol before & after column character
+
+Q.1) If marks less than 40 then "Fail" other wise "Pass".
+	=>	=IF(B2<E2,"Fail","Pass")---#without Absolute Reference...
+********=IF(B2<$E$2,"Fail","Pass")--#with Absolute Reference...
+
+Q.2) Show Profit,Loss and NoLoss-NoProfit.
+	=>	=IF(G2=0,"NoLoss-NoProfit",IF(G2<0,"Loss","Profit"))--#Nested If...
+	
+-Refer file "Excel Exercise CDAC.xlsx"->'Sheet2'
+Q.3) Using If function, check if the demand is below 40, print "Low"
+	If the demand is more than 70, print "High" otherwise print "Medium".
+	=> =IF(A2<40,"Low",IF(A2<70,"Medium","High"))
+	
+##################################################################################
+-Refer file "Excel Exercise CDAC.xlsx"->'Sheet2'
+$$$$ Generate Random numbers in range=>
+							=RANDBETWEEN(start,end)
+	
+Q.1) Generate 10 random number between 10 to 99.
+	=>	=RANDBETWEEN(10,99)--#fixed all values...Refer "02steps"
+		02steps:
+			{Go to (Copy all Random values)->Menu->Home->Paste Options->Values(V)}
+
+Q.2) Generate 20 random numbers between 2000 to 8000 and add under header "Quantity".
+	=> =RANDBETWEEN(2000,8000)--#fixed all values...Refer "02steps"
+	a) average of quantity where value is below 5000.
+		=>	=AVERAGEIF(E2:E21,"< 5000")
+		
+	b) count f quantity where value is mre than 6000.
+		=>	=COUNTIF(E2:E21,"> 6000")
+		
+	c)use IF function to show quantity resultin next column.
+	  If value is above 5000 then print "Above expected"
+	  otherwise print "Below Expected".
+		=>	=IF(E2>5000,"Above Expect","Below Expect")
+
+######################################################################################
+-Refer file "Excel Exercise CDAC.xlsx"->'Conditional Formatting'
+
+-Conditional Formatting->
+	To set font color or background color based on 
+	specific business conditions is called Conditional Formatting. 
+
+Q.1) In profit column, set background color "Red" for -ve values and "Green"
+	 for +ve values.
+	=>	--#Refer "03steps"
+		03steps:
+			{(select the values)->Go to Menu->Home->Conditional Formatting->New Rule
+			  ->(select "Format only cells that contains")->Format only cells with:
+			  -> (choose comparison oprator,value & format. as needed)->ok}
+--Data Bars->
+		cell gets colored only some parts according to
+		percentile to max value of selected ones.--#Refer "04steps"
+		04steps:
+			{(select the values)->Go to Menu->Home->Conditional Formatting->Data Bars}
+			
+$$$$ Maximum function=>
+					=MAX([Values])
+$$$$ Minimum function=>
+					=MIN([Values])
+					
+--Icon sets-> Range(Max-Min) gets divided into equal parts and assigned icons.
+	e.g.	Between Min & Min+(Range/3)			=>	Red
+			Between Min+Range/3 & Max-(Range/3)	=>	Yellow
+			Between Max-(Range/3) & Max			=>	Green
+
+Q.1) Unde No. of orders column, generate 25 ranfdom numbers between 10000 to 55000. 
+	 Use conditional formatting on this column to identify range values for
+	 Red, Yellow & Green.
+	=>	Min 			13459
+		Min + 33%Range	26210.33333
+		Max-33%Range	35908.66667
+		Max				49309
+	
+		Between Min & Min+33%	Red
+		Between Min+33% & Max-33%	Yellow
+		Between Max-33% & Max	Green
+		
+#####################################################################################
+Types of Analytics-
+1. Descriptive	=> What happend?
+2. Diagnostic	=> Why happend?
+3. Predictive	=> What will happen?
+4. Prescriptive	=> What to do to avoid/favor future situation?
+
+Measure of Central Tendency	=> Mean,Median,Mode
+Measure of Disperson		=> Standard Deviation, Variance
+
+--To get Discriptive statistics of range of values--#refer "05steps"
+	05steps:
+		{Go to Menu->Data->Data Analyis->Descriptive Statistics
+		 ->(Select values in "Input Range")->()
+		 ->
+		   (tick Summary Statistics,kth larges[2] and kth smallest[2])
+		 ->(Select cell in output range)}
+
+--To sort range of values--#refer "06steps"
+	06steps:
+		{Go to Menu->Home->Sort->Sort Samllest to Largest(Asc.)}
+
+###########################################################################
+$$$$ Correlation=>
+	It shows how much one variable changes when second variable 
+	is changed. Its value always between -1 to +1.
+	-1 means strong negative correlation
+	+1 means strong positive correlation
+	 0 means no correlation
+	-> 	=CORREL([valuesRange-1],[valuesRange-2])
+
+-Refer file "Excel Exercise CDAC.xlsx"->'Correlation'
+Q.1)Find correlation between Profit & Margin
+	=>	=CORREL(A2:A101,B2:B101)
+
+Q.2) Under column X, add 20 random values between 100 to 300 and
+	 sort in ascending order. Under column Y, add 20 random
+	 values between 4500 to 6500 and sort them descending order.
+	 Finally calculate correlation between X & Y.
+	=>	=CORREL(I2:I21,J2:J21)
+	
+######################################################################################	
+$$$$ Lookup functions=>
+			This functions are used to get mathcing values from one sheet 
+			to another based on matching field.
+				1)VLOOKUP-> Vertical through column
+****=VLOOKUP(ValueCellToMatch,OtherTableRange,ColIndexToGetValue,Approx./Exact(TRUE/FALSE))
+
+				2)HLOOKUP-> Horizontal through rows
+****=HLOOKUP(ValueCellToMatch,OtherTableRange,RowIndexToGetValue,Approx./Exact(TRUE/FALSE))
+-Refer file "Excel Exercise CDAC.xlsx"->'Transaction'&'Location'
+Q.1.Get State in Transactions sheet by comparing Area Code with Location sheet.
+	=> =VLOOKUP(C2,Location!$A$2:$D$157,2,FALSE)
