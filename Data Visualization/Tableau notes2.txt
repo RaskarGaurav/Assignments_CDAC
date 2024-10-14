@@ -122,7 +122,33 @@ $$$$ Create custom calculations (KPI)
   3)subCat Group 3 - Furnishing, copiers, Binder & Machine.
   4)subCat Group 4 - Chair, Bookcases, Envelope, Fastner &
 					 Supplies.
+==================================================================
+
+$$$$ Dashboard objects-
+		1)Container (vertical & horizontal) 
+		2)Text
+		3)Image
+		4)Web Page
+		5)Navigation
+		6)Blank
+		
+	1)Create vertical bar chart using region & sales.
+	2)create vertical bar chart using market & profit.
+	3)Create horizontal bar chart using Sub-category & quantity.
+	4)Create pie chart using Category & Profit.
+	5)Create pie chart using Segment & Profit.
+	6)Create pie chart using Ship Mode & Profit.
+	7)Create pie chart using Order Priority & Profit.
+	
+	No. of orders
+	No. of customers
+	No. of products
+	No. of returned orders
+	No. of losses
  
+	https://en.m.wikipedia.org/wiki/Main_Page
+	https://en.m.wikipedia.org/wiki/  	India
+	https://en.m.wikipedia.org/wiki/	Mexico
 	
 			
 	
