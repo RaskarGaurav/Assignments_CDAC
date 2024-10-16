@@ -150,6 +150,41 @@ $$$$ Dashboard objects-
 	https://en.m.wikipedia.org/wiki/  	India
 	https://en.m.wikipedia.org/wiki/	Mexico
 	
+	
+====================================================================
+$$$$ Data blending is a technique to combine the data coming from
+	 different sources like SQL, NoSQL, Excel, JSON, text etc.
+	 
+	 -Types=>
+	 1)Primary 
+	 2)Secondary
+	 
+	 First data source selected for blending process is considered
+	 as Primary and all other data sources are considered Secondary.
+	 
+	 In every blending, there is only one Primary data source. But
+	 there can be multiple secondary.
+	 
+	 How to identify Primary & Secondary?
+	 ->Primary data source - Blue color
+	 ->Secondary data source - Orange color
+========================================================================
+$$$$ Story - Stories are created based on important dimensions orders
+			 measures in the buiseness. e.g. Country, Department, Product,
+			 Prodit, Cost etc.
+	
+	It is similar to PowerPoint in ms office. Stories are used by top
+	management during client meetings for business promotions.
+	
+	A story is created by adding story points similar to slides in
+	a PPT.
+==========================================================================
+$$$$ Word Cloud
+	 1) Drag the dimension on Text button of Marks card.
+	 2) Change Marks from Automatic to Text.
+	 3) Drag the same dimension again on Color button.
+	 4) Drag the measure value on Size button.
+	
 			
 	
 		
