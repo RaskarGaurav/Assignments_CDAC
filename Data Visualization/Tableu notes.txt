@@ -1,0 +1,150 @@
+-Refer file "Global Superstore.xlsx"
+$$$$ Measure vs Dimension=>
+		Measure is any numeric column (with or
+		without decimal) on which maths & status function 
+		can be applied to get meaningful results in business.
+		e.g. profit, Quantity, Demand, Tax, etc.
+		
+		Dimensions is any column(numeric/character,Date) which 
+		is not a measure can be used to aggregate the measures.
+		e.g. RowID, RollNo., joining Date, rating, Name, etc. 
+		
+	28 columns
+	numeric - 8
+	Date - 3
+	Character - 17
+		7 Measures
+		21 Dimensions
+		
+	- Tableau shows measures in Green colr and 
+	  dimensions in Blue color.
+	
+	- Common data types in Tableau
+	1) string		-> Abc
+	2) numeric		-> #
+	3) date 		-> *Calender symbol
+	4) Boolean		-> T|F
+	5) geographic	-> *Globe symbol
+	
+	Tableau supports 3 types of sorting -
+	1) Ascending
+	2) Descending
+	3) Default order(Original)
+	
+	-Joins in Tableau=>
+	1) JOIN - this technique was used by Tableau
+			  before 2020. (old)
+	2) RELATIONSHIP - this technique is new and
+				intoduced fron 2020 onwards.(new)
+	
+	* join uses INNER join as default.
+		-Join immediately.
+	* RELATIONSHIP uses LEFT OUTER as default.
+		-Only join if required.
+		
+	3 components of Tableau
+	1) WorkSheet
+	2) Dashboard
+	3) Story
+	
+	9 sections on Tableau page
+	1) Dimesion
+	2) Measure
+	3) Row
+	4) Column
+	5) Pages
+	6) Filter
+	7) Marks
+	8) Canvas
+	9) Show Me
+	
+	4 Layout in Tableau
+	1) Standard
+	2) Fit Width
+	3) Fit Height
+	4) Entire View
+	
+	--Highlight Table=>
+		colored table- Bigger the value 
+					   Darker the color.
+	How to set two colors based on business condition?
+	=>	
+Q.1. highlight the regions where shipping cost is 
+	 more than 90000.
+	 (to set 2 colors, select color scheme with word
+	 "Diverging")->Stepped colors(2)->Advanced->set Center:
+	
+	--Pie Chart=>
+		Always show % values in Pie chart labels.
+
+	--Bubble Chart=>
+		Same as Pie Chart but, each value is represented
+		as a circle and size of the circle depends on the value.
+		Showing % here is not mandatory.
+	
+	--TreeMap=>
+		same as Bubble chart, uses rectangle.
+		Area & color of rectangle are decided by value.
+		-Treemap doesn't support any type of sorting.
+		-Color scheme is similar to Highlight Table.
+		-Treemap with Grouping=>
+		
+	
+--How to convert a dimension to COUNT?
+	1) Convert dimension "ORDER ID" to COUNT to
+	   display no.of orders.
+	
+	COUNT vs COUNTD
+	  |			|
+	all 	   all
+	values     Unique
+	with       values.
+	duplicates.
+	
+	-- Bar Chart=>
+		1) regular
+		2) Side by side
+		3) 100% stack
+	1) Regular
+		How to set 2 colors in Bar chart using
+		business condition/
+	
+		1) Drag the measure on color button.
+		2) Open color button, Edit color & select
+		   any diverging color option.
+		3) Select step = 2 and set center value.
+	
+	2) Side by side=>
+		This chart is used to compare two dimensions
+		based on measure value. Here both dimensions
+		are added either on rows or columns. 
+		Total bars created = no. of values in dimension 1 *
+								no.of values in dimension 2
+		
+		-for color use 2nd dimension
+
+	2) 100% stack=>
+		a) drag  a first dimension in rows.
+		b) drag measure in column to create bar chart.
+		c) Go to Analysis menu & select percent by "Row"
+		   to change bar to 100% bar.
+		d) drag measure on Label button.
+		e) finally drag second dimension on color button
+	
+	-- Line Chart=>
+			a) Discrete (Blue Color)
+			b) Continuous (Green color)
+		
+		To create line chart, drag date field in Columns.
+			e.g.1) Year
+				2) Quarter
+				3) Month
+				4) Day
+		Discrete Date - Here year part is not considered
+		months & quarters.
+		
+		Continuous Date - Here year part is combined with
+		moths or quarters.
+	
+	
+	

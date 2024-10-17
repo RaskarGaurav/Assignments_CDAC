@@ -1,0 +1,113 @@
+-Refer file "Excel Excercise CDAC.xlsx"-> 'outliers'sheet
+$$$$ Outliers=>
+			Normal values oneither side is called outlier.
+	
+		Q1 -first Quartile -> 25% Percent value below this value
+		Q2 -Second Quartile -> 50% Percent value below this value
+		Q3 -Third Quartile -> 75% Percent value below this value
+			=QUARTILE([ValueRange],Quart(1/2/3))
+		
+		IQR - InterQuatrtile Range 
+				(Q3-Q1)
+		
+		UpperLimit = Q3+(1.5*IQR)
+		LowerLimit = Q1-(1.5*IQR)
+	How to trear the outliers?
+	1) Adjust the values(with mean & median)
+		OR
+	2) Remove the values
+
+###################################################################
+-Refer file "Excel Excercise CDAC.xlsx"-> 'Line Chart'sheet
+$$$$ Line Chart=>
+			Used show time series data.
+		07steps:
+			{Goto Menu->Insert->LineChart->(RightClick)->Select Data
+			-> Add(label and select Range)->Edit->(Select axis labels range)}
+			
+###################################################################
+-Refer file "Excel Excercise CDAC.xlsx"-> 'Pie Chart'sheet
+$$$$ Pie Chart=>
+		
+		08steps:
+			{Goto Menu->Insert->3d Pie chart->(RightClick)->Select Data
+			-> Add(label and select Range)->Edit->(Select axis labels range) }
+			
+#############################################################################
+$$$$ Histogram=>
+		This chart is used to show spread of values in 
+		equal size ranges known as Bins.
+		
+		This chart shows either SUM or AVERAGE of values.
+		
+############################################################################
+$$$$ Data Consolidation=>
+		This technique is used to combine data coming from
+		different sheet and create single report by merging the data.
+
+############################################################################
+-Refer file "Excel Exercise CDAC.xlsx"-> 'sheet19' and 'sheet1'
+$$$$ Excel financial functions -
+		1) PMT(Payment)		-> To calculate monthly EMI on loan.
+					=PMT(rate monthly, Tenure months, principal)
+		2) FV(Fixed Value)	-> To calculate future Fixed deposit value.
+							   
+		3) PV(Present value)-> to calculate current investment amount
+							   for future returns.
+		
+		For PMT funtion, you have to enter loan amount,
+		annual interest rate % and total period for loan
+		return in months.
+
+Q.1) Calculate EMI for a customer who ha applied loan of
+	 760000 in two banks - BankA & BankB.
+	 BankA interest rate is 9.5% for 10 years.
+	 BankB interest rate is 9% for 11 years.
+	 Calculate EMI for both banks as wll as interest paid 
+	 in both. Using this data, find out which bank he has
+	 to pay lowest interest.
+	=>	
+							Loan amount	760000	
+							
+	BankA rate			9.50%			BankB rate			9%
+	BankA Tenure		10				BankB Tenure		11
+	BankA monthly rate	0.007916667		BankB monthly rate	0.0075
+	Months tenure		120				Months tenure		132
+	EMI A				₹ -9,834.21		EMI B				₹ -9,090.21
+			
+	Total Amount A		₹ -11,80,105.72	Total Amount B		₹ -11,99,907.85
+	Total Interest A	₹ -4,20,105.72	Total Interest B	₹ -4,39,907.85
+
+	*2)FV=> =FV(Interest rate,locking years,0,amount*-1)--->*0 because, no monthly payment...
+													  --->amount*-1 because,bank is paying...
+		This function calculates maturity amount of Fixed Deposit in a 
+		bank. i.e future value after certain period.
+		a)deposited money.
+		b)interest rate by bank.
+		c)locking period in years.
+		
+Q.2) A customer has deposited FD of 350000 is a bank for 2.5 years
+	 rate interest rate of 6.5%.
+	 Calculate how much money he will receive after 2.5 years?
+	=>
+	FD  amount			350000
+	Locking period		2.5
+	Interest			6.50%
+	
+	Maturity amount		₹ 4,09,677.45 -> =FV(B3,B2,0,B1*-1)
+	Interest amount		₹ 59,677.45
+
+	3)*Pv=> =PV(Rate,waiting years,0,amount needed)--->*0 because, no monthly payment...
+		how much money to be invested now so that certain
+		amount can be received in future
+		a)future anount required
+		b)interest rate
+		c)waiting period in years
+		
+Q.3) customer wants to receive amount 800000
+	 after 9 years for higher education. bank
+	 interest rate is 4.75%. How much money he should invest now?
+	=>
+	
+		
+	
