@@ -13,7 +13,7 @@ Q.1)Calculate total actual sales for those records where area code is 970.
 Q.2) Calaculate total profit where area code is 719.
 	=>	=SUMIF(B2:B21,"719",D2:D21)
 	
-Q.3) Calculate total Marketing Where are code is 303.
+Q.3) Calculate total Marketing Where are code is 303.	
 	=>	=SUMIF(B2:B21,"303",G2:G21)
 	
 Q.4)Calculate total cost where product id is 5.
