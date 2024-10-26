@@ -1,0 +1,64 @@
+ R is a programming language and software environment for statistical analysis 
+ graphics representation and reporting
+
+ creator ross ihaka 
+ year 1993 created 
+ old name S programming  
+ 
+ core R is a interpreted language
+ 
+ allowes integration with the procedures written in c++,.Net type of language
+ 
+ has an effective data handling and storage facility
+ 
+ strengths of R programming:
+ 
+ R has large num ber of packages for statistical analysis 
+ R can be used for complex modeling
+ R facilitates interaction with databases 
+ 
+ limited community support 
+ R cant be used  to create a complete end to end software 
+ 
+ Major Libraries 
+ 
+ R base 
+ tidy verse 
+ GG Plot
+ tidyr
+ etc.  
+ 
+-> print only prints single messeges
+ 
+-> cat used to print multiple messeges
+ cat doesnt add newline in the end
+ cat doesnt return anything 
+ 
+-> paste return a value 
+ return value can be assigned to a variable 
+ 
+ use variable name directly to print also
+ readline for accepting input from the user
+ 
+ 'string' is called as character vector in R
+ 
+ 
+ if ("Truth %in% x )
+{
+}else if 
+{}
+
+-IN BOLD LETTER = in R Programming indexes start with 1
+-Variable naming convention in R= A variable can store an atomic vector , group of atomic vctors or a combination of many R-objects
+-a dot(.) is allowed 
+-no _varname allowed in R 
+  
+  ls()=> to find all the current environment variabales 
+  can also use patttern mstch 
+  rm()=> is used to delete env variables 
+  rm(list=ls()) deletes all env variables.
+  
+
+
+
+
