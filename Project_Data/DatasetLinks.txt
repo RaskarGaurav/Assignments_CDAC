@@ -1,1 +1,9 @@
 https://huggingface.co/datasets/tanganke/stanford_cars?row=73
+
+https://huggingface.co/datasets/tanzuhuggingface/creditcardfraudtraining
+
+https://huggingface.co/datasets/pointe77/credit-card-transaction
+
+https://huggingface.co/datasets/Tichies/card-fraud
+
+https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset
