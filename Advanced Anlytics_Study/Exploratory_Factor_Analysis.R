@@ -25,3 +25,7 @@ z=pca(r,nfactors = 3,method = regression,rotate = "varimax",scores = T)
 z
 
 print(z$loadings,digits = 3,cutoff = 0.7)
+
+#Diagram
+loads <-z$loadings
+fa.diagram(loads)
