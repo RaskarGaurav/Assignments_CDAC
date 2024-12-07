@@ -1,0 +1,6 @@
+package collectionExample;
+import java.util.Comparator;
+
+public class SortByName implements Comparator<Product> {
+
+}

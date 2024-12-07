@@ -1,0 +1,17 @@
+package serializeDeserialize;
+
+import java.io.BufferedWriter;
+import java.io.File;
+
+public abstract class Test_Book {
+
+	public static void main(String[] args) {
+		Book bk1 = new Book(1234, "HEllo");
+		
+		File fileObj = new File("Book.txt");
+		
+		BufferedWriter bw = new BufferedWriter(FileWriter(fileObj));
+
+	}
+
+}

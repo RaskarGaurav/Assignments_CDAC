@@ -1,0 +1,22 @@
+package reflectionExample;
+
+public class Test_Reflection {
+	public static void main(String[] args) {
+		//show constr
+		//show methods
+		//
+		//Reflection -> load metadata dynamically
+		
+		try {
+			Class clsObj =Class.forName("reflectionExample.Book");//Load Book.class file
+			System.out.println("Class loaded successfully...");
+			
+			//get all metadata from type claObj
+			Field[]  allFields=clsObj.getFields();
+			
+		} catch (ClassNotFoundException e) {
+
+			e.getMessage();
+		}
+	}
+}

@@ -1,0 +1,16 @@
+package innerClass;
+import java.util.Scanner;
+public class TestAccount {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Account act = new Account();
+		//System.out.println(act);
+		System.out.println("Enter Account no., User Name, Account Type: ");
+		
+		Account act = new Account(sc.nextInt(),sc.next(),sc.next());
+		System.out.println(act);
+		
+	sc.close();}
+
+}

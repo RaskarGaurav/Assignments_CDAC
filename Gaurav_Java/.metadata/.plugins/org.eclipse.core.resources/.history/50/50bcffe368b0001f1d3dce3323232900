@@ -1,0 +1,27 @@
+package innerClass;
+
+public class Account {
+	private int actid;//auto increment for actid
+	private String name;
+	private AccountType actType;
+	private Date dob;
+	
+	public Account() {
+		actid =101;
+		name="Walter_White";
+		actType = AccountType.Savings;
+		dob=new Date();
+	}
+	
+	public Account(int actid, String name, Account actType,Date dob) {
+		this.actid = actid;
+		this.name = name;
+		this.actType = actType;
+		this.dob = dob;
+	}
+	
+	@Override
+	public String toString() {
+		return "Account No.: "+actid+"\nName: "+name+"\nAccount Type: "+actType+"\nDate of Birth: "+dob;
+	}
+}

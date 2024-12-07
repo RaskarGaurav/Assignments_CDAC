@@ -1,0 +1,15 @@
+package streamsExample;
+
+import java.util.*;
+
+public class Test_Stream {
+
+	public static void main(String[] args) {
+		
+		List<Integer> lst= Arrays.asList(10,56,30,56,45);
+		//Display
+		System.out.println("*****Show All*****");
+		lst.stream().forEach((n) -> {System.out.print(n+" ");}); //convert collection ---> Stream //use terminal operation
+	}
+
+}

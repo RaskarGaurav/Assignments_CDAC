@@ -1,0 +1,15 @@
+package bankTransactions;
+
+public class Account {
+	private int actid;
+	private String name;
+	private Double bal;
+	
+	public Account() {
+		actid = 0;
+		name = "Unknown";
+		bal = 0.0;
+	}
+	
+	
+}

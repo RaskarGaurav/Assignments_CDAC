@@ -1,0 +1,7 @@
+package innerClass;
+
+public class Date {
+	private int dd;
+	private int mm;
+	private int yy;
+}

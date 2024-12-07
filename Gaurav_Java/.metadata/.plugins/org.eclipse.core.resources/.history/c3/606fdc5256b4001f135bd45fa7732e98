@@ -1,0 +1,32 @@
+package jdbc;
+
+import java.sql.DriverManager;
+
+//import com.mysql.cj.jdbc.Driver;
+public class JavaDBConn {
+
+	public static void main(String[] args) {
+		//Reflection:
+		try {
+			//Step 1: Load Driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("------Driver Loaded--------");
+			
+			//Step 2: create conn sith db
+			String conUrl = "jdbc:mysql//localhost:3306/test";
+			
+			//user DriverManager to get connected with conUrl
+			DriverManager.getConnection(conUrl);
+			
+			
+			
+			
+		} catch (ClassNotFoundException e) {
+			
+			System.err.println(e.getLocalizedMessage());
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package tester;
+import product.Product;
+import calculations.MyMath;
+
+public class Test_Product {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

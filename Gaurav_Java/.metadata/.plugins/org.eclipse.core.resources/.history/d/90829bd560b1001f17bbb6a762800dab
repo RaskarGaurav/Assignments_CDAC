@@ -1,0 +1,11 @@
+package collectionExample;
+import java.util.*;
+public class Test_Product {
+
+	public static void main(String[] args) {
+		
+		List<Product> = new Aray
+
+	}
+
+}

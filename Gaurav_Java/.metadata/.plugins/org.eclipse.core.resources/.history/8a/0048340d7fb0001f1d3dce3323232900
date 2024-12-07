@@ -1,0 +1,8 @@
+package exceptionHandling;
+
+public class Math {
+	public void div(int a, int b) {
+		System.out.println("Division: "+a/b);
+		throw new ArithmeticException("Please Enter Number.");
+	}
+}

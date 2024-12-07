@@ -1,0 +1,32 @@
+package jdbc;
+
+import java.sql.*;
+
+//import com.mysql.cj.jdbc.Driver;
+public class JavaDBConn {
+
+	public static Connection getDbConnection() {
+		//Reflection:
+		try {
+			//Step 1: Load Driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("------Driver Loaded--------");
+			
+			//Step 2: create conn sith db
+			String conUrl = "jdbc:mysql://localhost:3306/test";
+			
+			//user DriverManager to get connected with (conUrl , HostName, PassWd)
+			Connection dbCon = DriverManager.getConnection(conUrl, "root","root123");
+			
+			System.out.println("--------Connection Establish----------");
+			
+			
+		} catch (Exception e) {
+			
+			System.err.println(e.getLocalizedMessage());
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package innerClass;
+
+public class Account {
+	private int actid;//auto increment for actid
+	private String name;
+	private String actType;
+	
+	public Account() {
+		actid =101;
+		name="Walter_White";
+		actType = "No type yet";
+	}
+	
+	public void Display() {
+		System.out.println("Account No.: "+actid+"\nName: "+name+"\nAccount Type: "+actType)
+	}
+}

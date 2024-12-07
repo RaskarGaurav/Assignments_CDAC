@@ -1,0 +1,77 @@
+package dateFormat;
+
+import java.text.*;
+import java.util.*;
+
+public class Product {
+	private int prdid;
+	private String name;
+	private Double price;
+	private Category prdCat;
+	private Date date;
+	
+	private static SimpleDateFormat sdf;
+	
+	static {
+		sdf= new SimpleDateFormat("dd/mon/yyyy"); // IMPORTANT to specify Date Format 
+	}
+
+	public Product(int prdid, String name, Double price, String prdCat,String date) throws ParseException {
+		super();
+		this.prdid = prdid;
+		this.name = name;
+		this.price = price;
+		this.prdCat = Category.valueOf(prdCat);
+		this.date = sdf.parse(date);
+	}
+
+	public int getPrdid() {
+		return prdid;
+	}
+
+	public void setPrdid(int prdid) {
+		this.prdid = prdid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public Category getPrdCat() {
+		return prdCat;
+	}
+
+	public void setPrdCat(Category prdCat) {
+		this.prdCat = prdCat;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Product [prdid=" + prdid + ", name=" + name + ", price=" + price + ", prdCat=" + prdCat + ", date="
+				+ date + "]";
+	}
+	
+
+	
+}	

@@ -1,0 +1,23 @@
+package file_IO;
+import java.util.Scanner;
+public class Test_FileIO {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\n1)create file\n2)Read File\n3)Write File\n4)Exit");
+		try {
+			int ch;
+			do {
+				System.out.println("Enter Coice: ");
+				ch = sc.nextInt();
+				switch(ch) {
+				case 1:
+					System.out.println("Enter file name:");
+				}
+			}while(ch!=0);
+			
+			
+		}catch(Exception e) {
+			
+		}
+	}
+}

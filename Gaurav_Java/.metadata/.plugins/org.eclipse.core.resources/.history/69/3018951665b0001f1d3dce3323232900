@@ -1,0 +1,11 @@
+package innerClass;
+
+public class TestAccount {
+
+	public static void main(String[] args) {
+
+		//Account act = new Account();
+		//act.Display();
+	}
+
+}

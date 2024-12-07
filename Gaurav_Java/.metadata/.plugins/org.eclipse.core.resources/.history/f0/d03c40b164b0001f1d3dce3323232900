@@ -1,0 +1,11 @@
+package innerClass;
+
+public class TestAccount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account act = new Accouunt();
+		act.Display();
+	}
+
+}

@@ -1,0 +1,13 @@
+package tester;
+
+import product.Product;
+import calculations.MyMath;
+
+public class Test_Product {
+
+	public static void main(String[] args) {
+		Product prd;
+
+	}
+
+}

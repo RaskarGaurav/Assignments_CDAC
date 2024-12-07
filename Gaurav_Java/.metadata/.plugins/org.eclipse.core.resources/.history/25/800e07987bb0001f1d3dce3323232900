@@ -1,0 +1,13 @@
+package exceptionHandling;
+
+public class Test_Math {
+
+	public static void main(String[] args) {
+		int a=10,b=0;
+		Math obj = new Math();
+		obj.div(a, b);
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package collectionExample;
+
+public class Product implements Comparable<I> {
+	private int pId;
+	private String name;
+	
+	public Product(int pId, String name) {
+		super();
+		this.pId = pId;
+		this.name = name;
+	}
+	
+	
+}

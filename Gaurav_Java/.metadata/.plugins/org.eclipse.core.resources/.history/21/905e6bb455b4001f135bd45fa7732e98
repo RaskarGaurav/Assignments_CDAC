@@ -1,0 +1,18 @@
+package jdbc;
+import com.mysql.cj.jdbc.Driver;
+public class JavaDBConn {
+
+	public static void main(String[] args) {
+		//Reflection:
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+		} catch (ClassNotFoundException e) {
+			
+			System.out.println(e.getLocalizedMessage());
+		}
+		
+
+	}
+
+}

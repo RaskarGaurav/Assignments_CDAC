@@ -1,0 +1,16 @@
+package bankTransactions;
+
+public class AccountValidation{
+	private static boolean isActIdValid(int actId) {
+		if()
+	}
+	private static int cnt(int num) {
+		int count = 0;
+
+	    while (num != 0) {
+	      num /= 10;
+	      ++count;
+	    }
+	    return count;
+	}
+}

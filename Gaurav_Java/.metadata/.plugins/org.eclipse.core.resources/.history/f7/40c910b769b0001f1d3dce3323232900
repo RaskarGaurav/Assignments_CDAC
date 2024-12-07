@@ -1,0 +1,10 @@
+package enumExample;
+
+public enum cool {
+	;
+
+	public static void main(String[] args) {
+		d =sc.nextInt();
+	}
+
+}

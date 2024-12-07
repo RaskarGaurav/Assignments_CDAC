@@ -1,0 +1,7 @@
+package collectionExample;
+
+public class Product implements Comparable<I> {
+//sort by
+//sort by
+//sort by
+}

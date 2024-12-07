@@ -1,0 +1,5 @@
+package innerClass;
+
+public enum AccountType {
+	current,Savings,Loan
+}

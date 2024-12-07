@@ -1,0 +1,11 @@
+package jdbc;
+import com.mysql.cj.jdbc.Driver;
+public class JavaDBConn {
+
+	public static void main(String[] args) {
+		//Reflection:
+		Class clsObj =  new Class("")
+
+	}
+
+}

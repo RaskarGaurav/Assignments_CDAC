@@ -1,0 +1,24 @@
+package serializeDeserialize;
+
+import java.io.*;
+
+public abstract class Test_Book {
+
+	public static void main(String[] args) {
+		Book bk1 = new Book(1234, "HEllo");
+		
+		File fileObj = new File("Book.txt");
+		
+		try {
+			BufferedWriter bw = new BufferedWriter(new FileWriter(fileObj));
+			bw.write(bk1.getBookId()+" "+bk1.getName());
+			bw.close();
+		} catch (IOException e) {
+			
+			System.out.println(e.getLocalizedMessage());
+		}
+		
+
+	}
+
+}

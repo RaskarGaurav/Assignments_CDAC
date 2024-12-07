@@ -1,0 +1,14 @@
+package collectionExample;
+import java.util.*;
+public class Test_Product {
+
+	public static void main(String[] args) {
+		
+		List<Product> products = new ArrayList<Product>();
+		
+		while(true) {
+			System.out.println("\n\n*****MEnU*****\n1)All Products\n2)Create Product\n3)Change pId\n4)Change name\n5)Sort Products\n6)Sort by Names\n7)Exit")
+		}
+	}
+
+}

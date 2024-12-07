@@ -1,0 +1,36 @@
+package file_IO;
+import java.io.File;
+import java.util.Scanner;
+
+public class Test_FileIO {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\n1)create file\n2)Details2)Read File\n3)Write File\n4)Exit");
+		String fname;
+		try {
+			int ch;
+			do {
+				System.out.println("Enter Coice: ");
+				ch = sc.nextInt();
+				switch(ch) {
+				case 1:
+					System.out.println("Enter file name: ");
+					fname = sc.next();
+					File fObj = new File(fname);
+						if (fObj.exists()) System.out.println("\nAlready exists...");
+						else {
+							fObj.createNewFile();
+							System.out.println("\nFile Created...");
+						}
+						break;
+				case 2:
+					
+				}//switch
+			}while(ch!=0);
+			
+			
+		}catch(Exception e) {
+			
+		}
+	}
+}

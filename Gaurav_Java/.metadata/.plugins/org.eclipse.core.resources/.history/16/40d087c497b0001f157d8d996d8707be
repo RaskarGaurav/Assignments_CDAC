@@ -1,0 +1,7 @@
+package bankTransactions;
+
+public class Account {
+	private int actid;
+	private String name;
+	private
+}

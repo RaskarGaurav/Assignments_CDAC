@@ -1,0 +1,10 @@
+package dateFormat;
+
+import java.text.SimpleDateFormat;
+
+public class Product {
+	private int prdid;
+	private String name;
+	private Category prdCat;
+	private static SimpleDateFormat sdf;
+}	

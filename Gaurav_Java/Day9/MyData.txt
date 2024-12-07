@@ -1,0 +1,25 @@
+Serialization in java is process of writing(persisted) state of 
+object in Byte stream.
+
+The reverse is "Deserializtion" where byte-stream converted into 
+object.
+
+Both are platform independent. Means serialize in one platform
+and deserialize in another platform.
+
+
+SERIALIZE
+step 1: Create ObjectOutputStream from 
+             object of 'new File("<FileName>")';
+step 2: Create Book object
+step 3: Implement "Serialziable" for Book class
+step 4: UpCast and Write object into file using 'writeObject()';
+//Book should implement "Serializable" to convert into stream
+
+DESERIALE
+step 1: Create ObjectInputStream from 
+             object of 'new File("<FileName>")';
+step 2: Downcast and Read object using 'readObject()';
+
+
+IMP: use "transient" modifier to not get serialize or persist or write into Bye-Stream.

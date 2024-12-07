@@ -1,0 +1,35 @@
+package tester;
+import java.text.ParseException;
+import java.util.Scanner;
+
+import product.Product;
+import static calculations.MyMath.*;//import all static methods so, Do not need class name to access them...
+
+public class Test_Product {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Product prd;
+		
+		System.out.println("Enter PrdId, name, Category(grains,oils,fruits), price and date");
+		int prdid =sc.nextInt();
+		String name= sc.next(); 
+		String prdCat= sc.next().toLowerCase();
+		Double price = sc.nextDouble();
+		
+		//accept date in "dd/mm/yyyy"
+		String date = sc.next();
+		
+		try {
+			prd = new Product(prdid,name,price,prdCat,date);
+			System.out.println("\n\n"+prd);
+		} catch (ParseException e) {
+			System.err.println(e.getMessage());
+		}sc.close();
+		
+		System.out.println("add: "+ add(1,2));
+		
+		
+	}
+
+}

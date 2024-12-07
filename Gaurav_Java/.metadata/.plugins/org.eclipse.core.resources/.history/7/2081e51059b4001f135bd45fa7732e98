@@ -1,0 +1,28 @@
+package jdbc;
+import java.sql.*;
+
+public class Test_Connection {
+
+	public static void main(String[] args) {
+		//Client Code
+		
+		//Step 1: Connection
+		Connection con = JavaDBConn.getDbConnection(); 
+		
+		//Step 2: Write Query
+		String query = "SELECT * FROM emp;";
+		
+		//Step 3: Associate SQL with connection
+		//create statement
+		
+		try {
+			
+			Statement stmnt=con.createStatement();
+			
+		} catch (Exception e) {
+			System.out.println(e.getLocalizedMessage());
+		}
+		
+	}
+
+}

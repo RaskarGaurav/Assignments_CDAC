@@ -1,0 +1,8 @@
+package interfaceExample;
+
+public class Fruits implements Displayable {
+	private String name;
+	
+	@Override
+	
+}

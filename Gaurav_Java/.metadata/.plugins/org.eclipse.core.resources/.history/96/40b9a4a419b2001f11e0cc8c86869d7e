@@ -1,0 +1,34 @@
+package reflectionExample;
+
+import java.lang.reflect.*;
+
+public class Test_Reflection {
+	public static void main(String[] args) {
+		//show constr
+		//show methods
+		//
+		//Reflection -> load metadata dynamically
+		
+		try {
+			Class clsObj =Class.forName("reflectionExample.Book");//Load Book.class file
+			System.out.println("Class loaded successfully...");
+			
+			//get all metadata from type claObj
+			Field[]  allFields=clsObj.getDeclaredFields();
+			System.out.println("Field: ");
+			for (Field i: allFields) {
+				System.out.println(i.getType()+" "+i.getName());
+			}
+			
+			Method[] allMethods=clsObj.getDeclaredMethods();
+			System.out.println("Method: ");
+			for (Method i: allFields) {
+				System.out.println(i.getType()+" "+i.getName());
+			}
+			
+		} catch (ClassNotFoundException e) {
+
+			System.out.println("Class not found: " + e.getMessage());
+		}
+	}
+}

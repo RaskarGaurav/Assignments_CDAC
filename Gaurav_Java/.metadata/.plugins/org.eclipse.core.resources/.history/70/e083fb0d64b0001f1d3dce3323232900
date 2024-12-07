@@ -1,0 +1,12 @@
+package innerClass;
+
+public class Account {
+	private int actid;//auto increment
+	private String name;
+	private String actType;
+	
+	public Account() {
+		
+	}
+	
+}

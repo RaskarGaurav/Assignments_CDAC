@@ -1,0 +1,7 @@
+package bankTransactions;
+
+public class AccountValidation{
+	private static boolean isActIdValid(int actId) {
+		
+	}
+}

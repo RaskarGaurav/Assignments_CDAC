@@ -1,0 +1,34 @@
+package testerJar;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Test_Date {
+    public static void main(String[] args) {
+        // Scanner to take user input
+        Scanner sc = new Scanner(System.in);
+
+        // Define the expected date format
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        // Prompt user for input
+        System.out.println("Enter a date (in format yyyy-MM-dd): ");
+        String userInput = sc.next();
+
+        try {
+            // Parse the user input to a Date object
+            Date parsedDate = dateFormat.parse(userInput);
+
+            // Output the parsed Date object
+            System.out.println("Parsed Date: " + parsedDate);
+
+        } catch (Exception e) {
+            // Handle invalid date format
+            System.out.println("Invalid date format. Please enter the date in the format yyyy-MM-dd.");
+        }
+
+        sc.close();
+    }
+}
+
